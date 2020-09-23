@@ -84,6 +84,7 @@ export enum ResponseStatus {
 
 export interface axiosConfig {
     headers: {
+        'User-Agent': string,
         Accept: string,
     };
     auth: User;
