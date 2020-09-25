@@ -2,9 +2,9 @@
   "name": "rollback_app",
   "version": "1.0.0",
   "description": "Initiate a rollback of a specified application to a specified version.",
-  "main": "./.github/actions/rollback_app/index.ts",
+  "main": "index.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --outDir lib",
     "test": "tsc --noEmit && jest unit --runInBand",
     "integration": "tsc --noEmit && jest integration --runInBand",
     "lint": "eslint . --ext .ts",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/vvoloshchuk/rollback_app.git"
   },
-  "author": "",
+  "author": "SoftServe inc.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vvoloshchuk/rollback_app/issues"
