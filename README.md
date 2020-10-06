@@ -1,4 +1,4 @@
-# ServiceNow Rollback Installed Application
+# ServiceNow CI/CD GitHub Action for Rollback Installed Application
 
 Initiate a rollback of a specified application to a specified version if installation fails.
 
