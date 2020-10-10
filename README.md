@@ -20,7 +20,7 @@ Create secrets called
 ```yaml
 - name: Rollback Application 
   if: ${{ failure() && steps.install_app.outputs.rollbackVersion }}
-  uses: ServiceNow/sncicd_rollback_app@1.0 # like username/repo-name
+  uses: ServiceNow/sncicd-rollback-app@1.0 # like username/repo-name
   with:
     version: ${{steps.install_app.outputs.rollbackVersion}}
   env:
