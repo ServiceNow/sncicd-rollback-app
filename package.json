@@ -1,5 +1,5 @@
 {
-  "name": "rollback_app",
+  "name": "sncicd-rollback-app",
   "version": "1.0.0",
   "description": "Initiate a rollback of a specified application to a specified version.",
   "main": "index.ts",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ServiceNow/sncicd_rollback_app.git"
+    "url": "git+https://github.com/ServiceNow/sncicd-rollback-app.git"
   },
   "author": "SoftServe inc.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ServiceNow/sncicd_rollback_app/issues"
+    "url": "https://github.com/ServiceNow/sncicd-rollback-app/issues"
   },
-  "homepage": "https://github.com/ServiceNow/sncicd_rollback_app#readme",
+  "homepage": "https://github.com/ServiceNow/sncicd-rollback-app#readme",
   "devDependencies": {
     "@types/jest": "^26.0.12",
     "@types/node": "^14.6.2",
