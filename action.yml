@@ -1,5 +1,6 @@
 name: 'ServiceNow CI/CD Rollback App'
 description: 'Initiate a rollback of a specified application to a specified version.'
+author: "ServiceNow"
 inputs:
   version:
     description: "Application version to rollback"
@@ -7,3 +8,6 @@ inputs:
 runs:
   using: 'node12'
   main: './lib/index.js'
+branding:
+  icon: 'refresh-ccw'
+  color: 'green'
