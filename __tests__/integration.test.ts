@@ -5,10 +5,10 @@ import { Errors } from '../src/App.types'
 describe('Install app', () => {
     const original = process.env
     const envs = {
-        appSysID: '',
+        appSysID: '123',
         password: 'test',
         scope: '',
-        snowInstallInstance: 'test',
+        nowInstallInstance: 'test',
         username: 'test',
     }
     beforeEach(() => {
@@ -28,9 +28,9 @@ describe('Install app', () => {
     })
 
     it('app_sys_id and not app_scope', () => {
-        // simulate the secrets are not set
+        // simulate the secrets are not fully set
         process.env = {
-            snowInstallInstance: 'test',
+            nowInstallInstance: 'test',
             appSysID: '123',
         }
         const errors = [Errors.USERNAME, Errors.PASSWORD].join('. ')

@@ -9,20 +9,20 @@ export const run = (): void => {
     try {
         const errors: string[] = []
         const {
-            snowUsername = '',
-            snowPassword = '',
-            snowInstallInstance = '',
+            nowUsername = '',
+            nowPassword = '',
+            nowInstallInstance = '',
             appSysID = '',
             appScope = '',
         } = process.env
 
-        if (!snowUsername) {
+        if (!nowUsername) {
             errors.push(Errors.USERNAME)
         }
-        if (!snowPassword) {
+        if (!nowPassword) {
             errors.push(Errors.PASSWORD)
         }
-        if (!snowInstallInstance) {
+        if (!nowInstallInstance) {
             errors.push(Errors.INSTALL_INSTANCE)
         }
         if (!appScope && !appSysID) {
@@ -33,9 +33,9 @@ export const run = (): void => {
         } else {
             const props: AppProps = {
                 appSysID,
-                snowInstallInstance,
-                username: snowUsername,
-                password: snowPassword,
+                nowInstallInstance,
+                username: nowUsername,
+                password: nowPassword,
                 scope: appScope,
             }
             const app = new App(props)
