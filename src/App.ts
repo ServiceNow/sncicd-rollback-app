@@ -61,17 +61,17 @@ export default class App {
      * @returns string  Url to API
      */
     buildRequestUrl(options: requestOptions): string {
-        if (!this.props.snowInstallInstance || (!this.props.appSysID && !this.props.scope))
+        if (!this.props.nowInstallInstance || (!this.props.appSysID && !this.props.scope))
             throw new Error(Errors.INCORRECT_CONFIG)
 
         const params: string = this.buildParams(options)
-        return `https://${this.props.snowInstallInstance}.service-now.com/api/sn_cicd/app_repo/rollback?${params}`
+        return `https://${this.props.nowInstallInstance}.service-now.com/api/sn_cicd/app_repo/rollback?${params}`
     }
 
     /**
      * Checks version
      * Increment version
-     * Makes the request to SNow api rollback_app
+     * Makes the request to ServiceNow api rollback_app
      * Prints the progress
      * @returns         Promise void
      */

@@ -15,9 +15,9 @@ Runs if Install Application step is failed and install_app.outputs.rollbackVersi
 On GitHub, go in your repository settings, click on the secret _Secrets_ and create a new secret.
 
 Create secrets called 
-- `SNOW_USERNAME`
-- `SNOW_PASSWORD`
-- `SNOW_INSTALL_INSTANCE` only the **domain** string is required from the instance URL, for example https://**domain**.service-now.com
+- `NOW_USERNAME`
+- `NOW_PASSWORD`
+- `NOW_INSTALL_INSTANCE` only the **domain** string is required from the instance URL, for example https://**domain**.service-now.com
 - `APP_SYS_ID` or `APP_SCOPE`
 
 ## Step 3: Example Workflow Template
@@ -31,9 +31,9 @@ https://github.com/ServiceNow/sncicd_githubworkflow
   with:
     version: ${{steps.install_app.outputs.rollbackVersion}}
   env:
-    snowUsername: ${{ secrets.SNOW_USERNAME }}
-    snowPassword: ${{ secrets.SNOW_PASSWORD }}
-    snowInstallInstance: ${{ secrets.SNOW_INSTALL_INSTANCE }}
+    nowUsername: ${{ secrets.NOW_USERNAME }}
+    nowPassword: ${{ secrets.NOW_PASSWORD }}
+    nowInstallInstance: ${{ secrets.NOW_INSTALL_INSTANCE }}
     appSysID: ${{ secrets.APP_SYS_ID }}
     appScope: ${{ secrets.APP_SCOPE }}
 ```
@@ -41,9 +41,9 @@ Inputs:
 - **version** - Application version to install. Takes the version for rollback from the install application step. steps._**install_app**_.outputs.rollbackVersion is an id of the step
     
 Environment variable should be set up in the Step 1
-- snowUsername - Username to ServiceNow instance
-- snowPassword - Password to ServiceNow instance
-- snowInstallInstance - ServiceNow instance for rollback application 
+- nowUsername - Username to ServiceNow instance
+- nowPassword - Password to ServiceNow instance
+- nowInstallInstance - ServiceNow instance for rollback application 
 - appSysID - Required if app_scope is not specified. The sys_id of the application
 - appScope - Required if app_sys_id is not specified. The scope name of the application, such as x_aah_custom_app
 
